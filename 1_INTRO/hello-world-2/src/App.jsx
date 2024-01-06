@@ -18,6 +18,8 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <h1>Hello World 2</h1>
+      <h2 className="title1">Primeira página em React + Vite</h2>
+      <p className="title2"> Criada por: Danilo Aliotto Avelar</p>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}

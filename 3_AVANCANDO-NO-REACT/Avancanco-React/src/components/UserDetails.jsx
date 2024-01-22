@@ -3,8 +3,6 @@ const UserDetails = ({nome, idade, profissao}) => {
 
   return (
     <>
-        
-
         <h3>{nome}</h3>
         <p>Job: {profissao}</p>
         <p>{idade} Anos</p>

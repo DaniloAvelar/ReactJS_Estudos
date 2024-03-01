@@ -16,7 +16,7 @@ export const useFetch = (url) => {
 // 6 - Loading
     const [loading, setLoading] = useState(false);
 
-    // Função para metodo POST
+    // COnfig Cabeçalho POST
     const httpConfig = (data, method) => {
         if(method === "POST"){
             setConfig({

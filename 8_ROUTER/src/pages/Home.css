@@ -1,0 +1,19 @@
+.paiProducts{
+    width: 100%;
+}
+
+.products{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.products li{
+    border: 1px solid #9b9b9b;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    list-style: none; /* Tirando a bolinha do <li> */
+    margin: 0 10px;
+    width: 25%;
+}

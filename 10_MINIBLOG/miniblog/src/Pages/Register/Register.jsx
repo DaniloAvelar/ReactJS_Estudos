@@ -1,12 +1,16 @@
 import styles from './Register.module.css'
 
 import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 import {useAuthentication} from '../../Hooks/useAuthentication';
 
 const Register = () => {
+
+  const navigate = useNavigate();
+
   //Contole das states dos campos
-  const [displyName, setDisplayName] = useState("");
+  const [displayName, setDisplayName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -24,7 +28,7 @@ const Register = () => {
     //Nao necessita Ex: displayname = displayname, pois o nome ja é igual ao componente imput text
 
     const user = {
-      displyName,
+      displayName,
       email,
       password
     }
@@ -40,6 +44,10 @@ const Register = () => {
     //Criação do usuário
     console.log(res);
 
+    if(res){
+      navigate("/login")
+    }
+
   };
 
   useEffect(()=> {
@@ -50,15 +58,15 @@ const Register = () => {
 
   return (
     <div className={styles.register}>
-      <h2>Cadastre-se</h2>
+      <h2>Cadastre-se para criar posts</h2>
       <form onSubmit={handleSubmit}>
         <label>
           <span>Nome:</span>
           <input
             type="text"
-            name="displyName"
+            name="displayName"
             placeholder='Nome do usuário'
-            value={displyName}
+            value={displayName}
             onChange={(e) => setDisplayName(e.target.value)}
             required
           />

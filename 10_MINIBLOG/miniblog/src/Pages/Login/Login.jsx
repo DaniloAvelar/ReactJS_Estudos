@@ -63,7 +63,7 @@ const Login = () => {
             required
           />
         </label>
-        <button className='btn'>Cadastrar</button>
+        <button className='btn'>Login</button>
         {/* {!loading && <button className='btn'>Cadastrar</button>} */}
         {/* {loading && <button className='btn' disabled>Aguarde ...</button>}*/}
         {error && <p className="error">{error}</p>} 

@@ -1,0 +1,23 @@
+* Iniciando um API
+- npm init -y
+
+
+* Script inicialização API
+- "start": "nodemon ./index.js localhost 3000"
+
+
+* Chamando o Express e Ativando o mesmo
+const express = require('express)
+const app = express()
+
+
+* Midllewares para ler o JSON
+app.use(
+    express.urlencoded({
+        extended: false,
+    }),
+)
+app.use(express.json())
+
+* Escutando a porta
+- app.listen(3000)
